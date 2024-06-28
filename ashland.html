@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashland, Oregon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sticky-wrapper">
+        <header class="header">
+            <img src="tree.png" alt="Tree Image" class="tree-img">
+            <h1>Oregon</h1>
+        </header>
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="eugene.html">Eugene</a>
+            <a href="portland.html">Portland</a>
+            <a href="ashland.html">Ashland</a>
+        </nav>
+    </div>
+
+    <main class="image-container">
+        <img src="ashland.jpg" alt="Ashland cityscape" class="uniform-image">
+        
+        <div class="history-container">
+            <div class="history-title">About Ashland</div>
+            <div class="history-box">
+                <p>Ashland is a city in southern Oregon, known for its Shakespeare Festival and natural beauty.</p>
+                
+                <h3>City Statistics</h3>
+                <ul>
+                    <li>Population: 21,360 (2020 estimate)</li>
+                    <li>Incorporated: October 13, 1874</li>
+                    <li>Region: Southern Oregon</li>
+                    <li>Classification: Small Urban/Suburban</li>
+                    <li>Average Income: Slightly above state average</li>
+                </ul>
+                
+                <h3>Notable Attractions</h3>
+                <ol>
+                    <li>Oregon Shakespeare Festival</li>
+                    <li>Lithia Park</li>
+                    <li>ScienceWorks Hands-On Museum</li>
+                </ol>
+                
+                <table>
+                    <caption>Ashland Climate Data</caption>
+                    <tr>
+                        <th>Month</th>
+                        <th>Avg. High (°F)</th>
+                        <th>Avg. Low (°F)</th>
+                        <th>Avg. Precipitation (inches)</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>47</td>
+                        <td>32</td>
+                        <td>2.36</td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>88</td>
+                        <td>57</td>
+                        <td>0.39</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <aside class="did-you-know">
+            <div class="did-you-know-title">Did You Know?</div>
+            <div class="did-you-know-content">
+                <p>Ashland is home to Southern Oregon University and is known for its focus on the arts and education.</p>
+                <a href="https://www.ashland.or.us/" target="_blank">Visit City of Ashland Website</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <a href="contact.html" class="contact-btn">Contact</a>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

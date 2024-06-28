@@ -1,64 +1,59 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
+  overflow-y: scroll;
 }
 
-/* Style the header */
 .header {
   background-color: #436953;
-  padding: 50px;
+  padding: 25px;
   border-radius: 10px;
   border: 2px solid #000;
-  overflow: hidden;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
-  z-index: 1; /* Ensures the header is on top */
+  z-index: 2;
 }
 
-/* Style the header's h1 element */
+.sticky-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
 .header h1 {
   color: azure;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
   font-size: 80px;
   text-align: center;
-  position: relative;
   margin-right: 20px;
 }
 
-/* Style the top navigation bar */
 .topnav {
-  overflow: hidden;
-  background-color: #333;
-  border: 2px solid #e6d7df;
-  padding: 9px 0;
-  margin-bottom: 0;
-  z-index: 1; /* Ensures the nav is on top */
-  position: relative;
-}
+    overflow: hidden;
+    background-color: #333;
+    border: 2px solid #e6d7df;
+    padding: 9px 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+  }
 
-/* Style the topnav links */
 .topnav a {
-  float: left;
-  display: block;
-  color: #ffffff; /* White text color */
-  font-size: 24px; /* Kept the font size */
-  font-weight: bold; /* Kept the font weight */
-  text-align: center;
-  padding: 16px;
-  margin-left: 10px;
-  text-decoration: none;
-}
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    flex: 1;
+  }
 
-/* Change color on hover */
 .topnav a:hover {
   background-color: #ddd;
   border-radius: 10px;
@@ -69,53 +64,34 @@ body {
   width: 50px;
   flex-shrink: 0;
 }
-
 .image-container {
   position: relative;
   width: 100%;
-  margin-top: 0;
+  height: calc(100vh - 75px);
+  z-index: 1;
 }
 
 .oregon-img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  object-fit: cover;
 }
 
-.overlay-text {
+.content-container {
   position: absolute;
-  top: 10%; /* Adjust this value to move it closer to the navbar */
-  left: 50%;
-  padding: 10px 20px; /* Reduced padding */
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 32px;
-  text-align: center;
-  transform: translateX(-50%);
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.overlay-text:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
-.history-container {
-  position: absolute;
-  bottom: 10%; /* Adjust this value to move the container as needed */
+  top: 150px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+  max-width: 800px;
 }
 
 .history-title {
   margin-bottom: 20px;
-  padding: 10px 20px;
+  padding: 20px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -123,15 +99,118 @@ body {
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
+  width: 100%;
 }
 
 .history-box {
-  max-width: 90%; /* Increased width */
-  width: 80%; /* Increased width */
-  max-height: 400px;
+  width: 100%;
+  max-height: 300px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   border-radius: 10px;
   overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.did-you-know-box {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.did-you-know-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: #436953;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 19px 50px;
+  border-radius: 10px;
+  margin-top: 8px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #365644;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #436953;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #365644;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .topnav a {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .content-container {
+    top: 120px;
+  }
+
+  .history-title, .history-box, .did-you-know-box {
+    font-size: 16px;
+    padding: 15px;
+  }
 }
