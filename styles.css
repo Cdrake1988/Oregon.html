@@ -1,256 +1,258 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; } /* Reset default styles for all elements */
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  overflow-y: scroll;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack child elements vertically */
+  min-height: 100vh; /* Minimum height of 100% of the viewport height */
+  margin: 0; /* Remove default body margin */
+  overflow-y: scroll; /* Allow vertical scrolling if content overflows */
 }
 
 .header {
-  background-color: #436953;
-  padding: 25px;
-  border-radius: 10px;
-  border: 2px solid #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  background-color: #436953; /* Set background color */
+  padding: 25px; /* Add padding around header content */
+  border-radius: 10px; /* Round the corners */
+  border: 2px solid #000; /* Add a black border */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  z-index: 2; /* Set stacking order */
 }
 
 .sticky-wrapper {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #fff;
+  position: sticky; /* Make the wrapper stick to the top when scrolling */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* High z-index to ensure it's on top */
+  background-color: #fff; /* White background */
 }
 
 .header h1 {
-  color: azure;
-  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
-  font-size: 80px;
-  text-align: center;
-  margin-right: 20px;
+  color: azure; /* Set text color */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Add shadow to text */
+  font-size: 80px; /* Set font size */
+  text-align: center; /* Center the text */
+  margin-right: 20px; /* Add right margin */
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #333;
-    border: 2px solid #e6d7df;
-    padding: 9px 0;
-    z-index: 3;
-    display: flex;
-    justify-content: space-around;
+    overflow: hidden; /* Hide overflowing content */
+    background-color: #333; /* Set background color */
+    border: 2px solid #e6d7df; /* Add border */
+    padding: 9px 0; /* Add vertical padding */
+    z-index: 3; /* Set stacking order */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Distribute items evenly */
   }
 
 .topnav a {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    flex: 1;
+    color: #ffffff; /* Set text color */
+    font-size: 24px; /* Set font size */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center the text */
+    padding: 16px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+    flex: 1; /* Allow items to grow and shrink equally */
   }
 
 .topnav a:hover {
-  background-color: #ddd;
-  border-radius: 10px;
-  color: black;
+  background-color: #ddd; /* Change background on hover */
+  border-radius: 10px; /* Round corners on hover */
+  color: black; /* Change text color on hover */
 }
 
 .tree-img {
-  width: 50px;
-  flex-shrink: 0;
+  width: 50px; /* Set image width */
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
+
 .image-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
+  position: relative; /* Set positioning context for children */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  z-index: 1; /* Set stacking order */
 }
 
 .oregon-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  position: fixed; /* Fix position relative to viewport */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  z-index: -1; /* Place behind other content */
 }
 
 .content-container {
-  position: absolute;
-  top: 150px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
+  position: absolute; /* Position absolutely within its container */
+  top: 150px; /* 150px from the top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Maximum width of 1200px */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px; /* Add padding */
+  z-index: 2; /* Set stacking order */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out child elements */
 }
 
 .history-section {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
+  width: 65%; /* Set width to 65% of parent */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
 .history-title {
-  padding: 20px;
-  border-radius: 10px 10px 0 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 0;
+  padding: 20px; /* Add padding */
+  border-radius: 10px 10px 0 0; /* Round top corners */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  text-align: center; /* Center text */
+  color: #ffffff; /* White text */
+  font-size: 24px; /* Set font size */
+  font-weight: bold; /* Make text bold */
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
 .history-box {
-  width: 100%;
-  height: calc(100vh - 300px);
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  border-radius: 0 0 10px 10px;
-  overflow-y: auto;
+  width: 100%; /* Full width */
+  height: calc(100vh - 300px); /* Calculate height */
+  padding: 20px; /* Add padding */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: #fff; /* White text */
+  border-radius: 0 0 10px 10px; /* Round bottom corners */
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
 }
 
 .did-you-know {
-  width: 30%;
-  height: calc(100vh - 250px);
-  display: flex;
-  flex-direction: column;
+  width: 30%; /* Set width to 30% of parent */
+  height: calc(100vh - 250px); /* Calculate height */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
 .did-you-know-title {
-  padding: 20px;
-  border-radius: 10px 10px 0 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 0;
+  padding: 20px; /* Add padding */
+  border-radius: 10px 10px 0 0; /* Round top corners */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  text-align: center; /* Center text */
+  color: #ffffff; /* White text */
+  font-size: 24px; /* Set font size */
+  font-weight: bold; /* Make text bold */
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
 .did-you-know-box {
-  width: 100%;
-  height: calc(100vh - 300px);
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  border-radius: 0 0 10px 10px;
-  overflow-y: auto;
+  width: 100%; /* Full width */
+  height: calc(100vh - 300px); /* Calculate height */
+  padding: 20px; /* Add padding */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: #fff; /* White text */
+  border-radius: 0 0 10px 10px; /* Round bottom corners */
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
 }
 
 body {
-  min-height: 100vh;
-  margin: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  min-height: 100vh; /* Minimum height of 100% of the viewport height */
+  margin: 0; /* Remove default margin */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
+
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 75px;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  z-index: 1000;
+  position: fixed; /* Fix position relative to viewport */
+  left: 0; /* Align to left */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  height: 75px; /* Set height */
+  background-color: #333; /* Set background color */
+  color: white; /* White text */
+  text-align: center; /* Center text */
+  z-index: 1000; /* High z-index to ensure it's on top */
 }
 
 .contact-btn {
-  display: inline-block;
-  background-color: #436953;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 19px 50px;
-  border-radius: 10px;
-  margin-top: 8px;
-  transition: background-color 0.3s;
+  display: inline-block; /* Allow setting dimensions */
+  background-color: #436953; /* Set background color */
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Set font size */
+  padding: 19px 50px; /* Add padding */
+  border-radius: 10px; /* Round corners */
+  margin-top: 8px; /* Add top margin */
+  transition: background-color 0.3s; /* Smooth color transition on hover */
 }
 
 .contact-btn:hover {
-  background-color: #365644;
+  background-color: #365644; /* Change background color on hover */
 }
 
 .form-container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
+  max-width: 600px; /* Set maximum width */
+  margin: 20px auto; /* Center horizontally with top/bottom margin */
+  padding: 20px; /* Add padding */
+  background-color: #f4f4f4; /* Set background color */
+  border-radius: 10px; /* Round corners */
 }
 
 .form-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: center; /* Center text */
+  margin-bottom: 20px; /* Add bottom margin */
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
 input, textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  margin-bottom: 10px; /* Add bottom margin */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 5px; /* Round corners */
 }
 
 button {
-  padding: 10px;
-  background-color: #436953;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 10px; /* Add padding */
+  background-color: #436953; /* Set background color */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round corners */
+  cursor: pointer; /* Change cursor on hover */
 }
 
 button:hover {
-  background-color: #365644;
+  background-color: #365644; /* Change background color on hover */
 }
 
 @media (max-width: 820px) {
   .header h1 {
-    font-size: 40px;
+    font-size: 40px; /* Reduce font size for smaller screens */
   }
   
   .topnav a {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 18px; /* Reduce font size for smaller screens */
+    padding: 10px; /* Reduce padding for smaller screens */
   }
   
   .content-container {
-    top: 120px;
-    flex-direction: column;
-    align-items: center;
+    top: 120px; /* Adjust top position for smaller screens */
+    flex-direction: column; /* Stack children vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
   }
   
   .history-section, .did-you-know {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Add bottom margin */
   }
   
   .history-title, .history-box, .did-you-know-title, .did-you-know-box {
-    font-size: 16px;
-    padding: 15px;
+    font-size: 16px; /* Reduce font size for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
   }
   
   .history-box, .did-you-know-box {
-    height: auto;
-    max-height: 300px;
+    height: auto; /* Auto height */
+    max-height: 300px; /* Set maximum height */
   }
 }
