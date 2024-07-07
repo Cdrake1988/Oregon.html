@@ -220,7 +220,11 @@ button {
   border-radius: 5px; /* Round corners */
   cursor: pointer; /* Change cursor on hover */
 }
-
+.oregon-flag {
+  float: right;
+  width: 150px; /* Adjust as needed */
+  margin: 0 0 10px 15px; /* Top, Right, Bottom, Left */
+}
 button:hover {
   background-color: #365644; /* Change background color on hover */
 }
